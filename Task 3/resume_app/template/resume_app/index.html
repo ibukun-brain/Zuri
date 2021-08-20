@@ -1,0 +1,157 @@
+{% extends 'resume_app/base.html' %}
+{% load static %}
+{% block content %}
+
+<br><br><br>
+
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-body h-100  border-info profile-wrapper card-box">
+            <img class="profile-pic" src="{% static 'images/brainy.jpg' %}">
+            <hr class='my-2'>
+            <h4>Hi, I'm Ibukun</h4>
+            <p class='lead'>I love coding, collaborating</p>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card card-body h-100 card-box">
+            <h5>What I Know</h5>
+            <hr>
+            <p>Python, Django, HTML/CSS, JavaScript, WebScraping, Machine Learning, Datascience
+                JavaScript charts and a whole bunch more I can’t possibly mention in one sentence! ;)</p>
+            <p>PS: Working on Node JS, Mongo DB and Machine Learning.</p>
+        </div>
+    </div>
+</div>
+
+<br>
+<div class="row">
+    <div class="col-md-8" id="collapseExample">
+        <div class="card card-body h-100 border-info card-box">
+            <div class="container">
+                <h4>EXPERIENCE</h4>
+                <hr class="my-2">
+                <a href="https://internship.zuri.team" target="blank" style="color:#000;"><img src="{% static 'images/hng.jpg' %}" class="hng-logo"><span class="ml-2 h4 img-fluid">HNG Internship</span></a>
+                <p class="pt-3 h5">Backend Developer</p>
+                <span class="lead"><i>08/2021</i></span>
+
+                <ul style="font-size: 16px;" class="experience-list lead">
+                    <li>Hand of experience building and developing scalable web applications with HTML, CSS and
+                        Django.
+                    </li><span class="collapse" id="viewdetails3">
+                        <li>Day-to-day remote meetings and stand-up with team members on slack
+                        </li>
+                        <li>Converting figma UI/UX prototype designs into code</li>
+                        <li>Collaborating with web development team to implement complex user intefaces and API
+                            using
+                            version control</li>
+                        <li>Understanding of Agile web development process</li>
+                    </span><a style="font-size: 16px;" data-toggle="collapse" href="#viewdetails3">More... &raquo;</a>
+                </ul>
+            </div>
+
+            <div class="container">
+                <hr class="my-2">
+                <a href="https://internship.sidehustle.ng/" target="blank" style="color:#000;"><img
+                        src="{% static 'images/sidehustle.png' %}" class="img-fluid sidehustle-logo mb-3"><span
+                        class="ml-2 h4">SideHustle Internship</span></a>
+                <p class="mt-1 h5">Web Design & Development (WordPress)</p>
+                <span class="lead"><i>05/2021</i></span>
+
+                <ul style="font-size: 16px;" class="experience-list lead">
+                    <li>Understanding of CMS(Content Management System)</li><span class="collapse" id="viewdetails3">
+                        <li>Understanding of Wordpress templates and themes</li>
+                        <li>Understanding the differences between pages and post</li>
+                        <li>Development of Ecommerce Website</li>
+
+                        <li>Development of Blog</li>
+                    </span><a style="font-size: 16px;" data-toggle="collapse" href="#viewdetails3">More... &raquo;</a>
+                </ul>
+            </div>
+
+            <div class="container">
+
+                <hr class="my-2">
+                <a href="https://hashanalytic.com/internship/" target="blank" style="color:#000;"><img
+                        src="{% static 'images/hash.png' %}" class="hash-logo img-fluid"><span class="ml-2 h4">Hash
+                        Analytics</span></a>
+                <p class="mt- h5">Data Science & Machine Learning</p>
+                <span class="lead"><i>03/2020</i></span>
+
+                <ul style="font-size: 16px;" class="experience-list lead">
+                    <li>Basic Python Syntax and data type</li><span class="collapse" id="viewdetails3">
+                        <li>Use of Python libraries</li>
+                        <li>Data Visualization using tableau and pandas library</li>
+                        <li>Hands of google analytics</li>
+                        <li>Hands on machine learning Projects</li>
+                    </span><a style="font-size: 16px;" collapse" href="#viewdetails3">More... &raquo;</a>
+                </ul>
+
+                <ul class='social-links pl-1'>
+                    <li><a href=" #"><img class="socials" src="{% static 'images/facebook.png' %}"></a></li>
+                    <li><a href="#"><img class="socials" src="{% static 'images/youtube.png' %}"></a></li>
+                    <li><a href="#"><img class="socials" src="{% static 'images/linkedin.png' %}"></a></li>
+                    <li><a href="#"><img class="socials" src="{% static 'images/twitter.png' %}"></a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="col-md-4 ">
+        <div class="card card-body card-box">
+            <h5>How I Learn</h5>
+            <hr>
+            <p>Reverse Engineer & Build Ugly Prototypes First.</p>
+
+            <p>I can learn just about anything by having a final product to tear apart piece by piece. I break the code
+                where I need to figure out why things work the way they do. Documentation is just a reference.</p>
+        </div><br>
+        <div class="card card-body card-box">
+            <h5>My Short Term Goals</h5>
+            <hr>
+            <p>After almost two years of supporting my system at the lab I’m ready to learn something new. I'll
+                collaborating and sharing my experience with others on my blog & youtube channel.</p>
+            <p>Aside from building small projects I would love to enter a position where I can be part of a bigger team
+                & learn from others with more experience than myself.</p>
+
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-body h-100 card-box">
+            {% include 'resume_app/alerts.html'  %}
+            <form action="{% url 'resume_app:contact' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name" class="col-form-label">Name</label>
+                    <input type="text" name="name" class="form-control">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4" class="col-form-label">Email</label>
+                        <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="phone" class="col-form-label">Phone</label>
+                        <input type="text" name="phone" class="form-control" id="inputphone" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="FormControlTextarea1" class="col-form-label">Message</label>
+                    <textarea class="form-control" id="FormControlTextarea1" name="message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,116 @@
+
+body{
+    background-color: #f8f8f8;
+}
+
+div .card-box{
+    box-shadow: 0 4px 8px 0 rgba(175, 154, 154, 0.2)  ;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@-webkit-keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+@-moz-keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+ 
+@-ms-keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  
+@-o-keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+
+.profile-wrapper{
+    text-align: center;
+}
+
+.hng-logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%
+}
+
+.sidehustle-logo{
+    width: 80px;
+    height: 70px;
+
+}
+
+.hash-logo{
+    width: 150px;
+    height: 100px;
+}
+
+.profile-pic{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%
+}
+
+
+.social-links li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+/* .experience-list{
+   list-style-image: url('/static/images/bullet2.gif') 10%;
+    width: 10% !important;
+   
+} */
+
+.socials{
+    width: 20px;
+    height: 20px;
+}
